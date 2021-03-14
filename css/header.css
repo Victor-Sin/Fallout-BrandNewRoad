@@ -140,7 +140,7 @@ nav .CatMenu:hover
     background-color:  #e5ac2e;
 }
 
-@media (max-width: 1024px){
+@media only screen and  (max-width: 1024px){
     a.LogoSite img
     {
         width: 275px;
@@ -148,7 +148,7 @@ nav .CatMenu:hover
   }
 
 
-  @media (max-width: 726px) and (orientation: portrait){
+  @media only screen and (max-width: 726px) and (orientation: portrait){
     a.LogoSite img
     {
         width: 200px;
