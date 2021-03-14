@@ -1,0 +1,1619 @@
+@font-face
+{
+    src: url(../font/Overseer.ttf);
+    font-family: Overseer;
+}
+
+@font-face
+{
+    src: url(../font/FuturaPT-Bold.ttf);
+    font-family: FuturaPT;
+}
+
+@font-face
+{
+    src: url(../font/Schoolbook\ Regular.ttf);
+    font-family: Schoolbook;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.25;
+
+}
+
+body{
+  scroll-behavior: auto;
+  overflow : none;
+}
+
+body::after
+{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/grain.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 99;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+body::before
+{
+  content: "";
+  display: block;
+  top: -10vw;
+  left: -10vw;
+  width: 200vw;
+  height: 200vh;
+  position: fixed;
+  z-index: 999999;
+  background-repeat: repeat;
+  background-position: 50%;
+  background-image: url(../img/noise.png);
+  opacity: 0.35;
+  pointer-events: none;
+  animation: Noise 2s steps(2) infinite;
+}
+  
+#parent {
+    overflow-x: hidden;
+  }
+  
+.section {
+    height: 100vh;
+    position: relative;
+  }
+
+.cursor{
+  content: " ";
+  position: fixed;
+  width: 250px;
+  height: 250px;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  background: radial-gradient(rgb(255, 208, 80) 0%,transparent 70%);
+  z-index: 6;
+  pointer-events: none;
+  opacity: 0.1;
+  transition: all 0.05s;
+}
+
+#fullpage{
+  z-index: 0;
+}
+
+@keyframes Noise{
+  0%{
+    transform: translate(0,0);
+  }
+  10%{
+    transform: translate(-3rem,5rem);
+  }
+  20%{
+    transform: translate(2rem,5rem);
+  }
+  30%{
+    transform: translate(-6rem,3rem);
+  }
+  40%{
+    transform: translate(3rem,-5rem);
+  }
+  50%{
+    transform: translate(-2rem,-4rem);
+  }
+  60%{
+    transform: translate(8rem,-2rem);
+  }
+  70%{
+    transform: translate(-1rem,6rem);
+  }
+  80%{
+    transform: translate(2rem,3rem);
+  }
+  90%{
+    transform: translate(6rem,-3rem);
+  }
+  100%{
+    transform: translate(-4rem,2rem);
+  }
+}
+
+#changeScreen{
+  display: none;
+  position: fixed;
+  z-index: 6;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(31, 27, 24);
+  filter: sepia(0.3) brightness(0.8);
+}
+
+#changeScreen p{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  color: white;
+  text-align:center;
+  font-family: Schoolbook;
+  text-transform:uppercase;
+  font-size: 32px;
+  transform: translate(-50%,-50%);
+  width: 70%;
+}
+
+
+
+/*________________________________________________________________________Start Screen___________________________________________________________________________________*/
+
+.startScreen{
+  position: fixed;
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  background-color:rgb(31, 27, 24);
+  opacity: 1;
+  transition: all 0.5s;
+  filter: sepia(0.3) brightness(0.8);
+}
+
+.logoStart {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  width: -moz-fit-content;
+  overflow: hidden;
+  top: 30%;
+  left: 50%;
+  animation: center 0.5s both linear 0.5s;
+  transform: translate(0%,-50%);
+}
+
+.logoStart img{
+   padding-right:15px;
+   margin-top: 20px;
+}
+
+.titre h1{
+  padding: 0 auto;
+  margin-top: 5px;
+  text-align: center;
+  font-family: Overseer;
+  color:  #e5ac2e;
+  font-size: 160px;
+  line-height: 1;
+  animation: goUp 0.5s both ease-out 0.75s;
+}
+
+.titre div{
+  overflow: hidden;
+  width: fit-content;
+  width: -moz-fit-content;
+}
+
+.titre #Sub{
+  overflow-y: visible;
+  overflow-x: hidden;
+  margin-top: -18px;
+  width: 100%;
+}
+
+.titre p{
+
+  text-align:center;
+  font-family: FuturaPT;
+  text-transform:uppercase;
+  font-size: 38px;
+  line-height: normal;
+  color:  #e5ac2e;
+  animation: goUp 0.5s both ease-out 1s;
+}
+
+.startScreen #textStartScreen{
+  font-family: Schoolbook;
+  color: white;
+  font-size: 32px;
+  position: relative;
+  width: 60%;
+  top: 35%;
+  text-align: center;
+  margin : 0 auto;
+  transform: translateY(-50%);
+  font-style: italic;
+}
+
+.buttonStart{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center ;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+.buttonStart a{
+  position: relative;
+  font-family: Schoolbook;
+  text-decoration: none;
+  margin: 50px;
+  border: 2px dashed white;
+  padding: 20px 40px;
+  color: white;
+  font-size: 34px;
+  transition: all 0.5s;
+}
+
+
+.buttonStart a:hover{
+  color: rgb(31, 27, 24);
+  background-color: white;
+  border: 2px solid white;
+}
+
+
+@keyframes goUp{
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+
+@keyframes center{
+  from{
+    opacity: 0;
+    transform: translate(-25%,-50%);
+  }
+  to{
+    opacity: 1;
+    transform: translate(-50%,-50%);
+  }
+}
+
+
+
+
+/*__________________________________________________________________________Présentation____________________________________________________________________________________*/
+
+
+
+#Pres {
+    position: relative;
+    background-image: url(../img/FalloutPres.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 6;
+    box-shadow: 0px 2px 20px rgb(0,0,0,0.3);
+  }
+
+#Pres .bg
+{
+  opacity: 0.9;
+}
+
+.PresT{
+    position: relative;
+    top: 50%;
+    left: 7.5%;
+    transform : translateY(-50%);
+    width: 70%;
+    filter: sepia(0.3) brightness(0.7);
+}
+
+.PresT h1
+{
+    font-family: FuturaPT; 
+    width: fit-content;
+    width: -moz-fit-content;
+    font-weight: bold;
+    text-transform: uppercase;
+    color:  #e5ac2e;
+    font-size: 60px;
+    text-shadow: 0px 0px 5px rgb(0,0,0,0.7);
+    line-height: normal;
+    opacity: 0;
+}
+
+.PresT h1 span
+{
+    margin-left: 5vw;
+    line-height: normal;
+    opacity: 0;
+}
+
+.PresT p
+{
+    margin: 20px;
+    color: white;
+    font-size: 34px;
+    width: 70%;
+    font-family: Schoolbook;
+
+    text-shadow: 0px 0px 5px rgb(0,0,0,0.7);
+    opacity: 0;
+}
+
+#down
+{
+  position: absolute;
+  bottom: 2.5%;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  filter: sepia(0.3) brightness(0.8);
+  color:  #e5ac2e;
+  animation: Down 0.6s linear infinite alternate ;
+  user-select: none;
+}
+
+#down a i 
+{
+
+  color:  #e5ac2e;
+  font-size: 40px;
+  text-shadow: 0px 0px 5px rgb(0,0,0,0.7);
+}
+
+
+@keyframes Down
+{
+  from{
+    transform: translateY(0);
+  }
+  to{
+    transform: translateY(15px);
+  }
+}
+
+@keyframes opaci
+{
+  from{
+    opacity: 0%;
+  }
+  to{
+    opacity: 100%;
+  }
+}
+
+
+/*__________________________________________________________________________Chronogie____________________________________________________________________________________*/
+
+#Chrono {
+    background-color: rgb(31, 27, 24);
+    overflow: hidden;
+    
+  }
+
+#Chrono #Magazine
+{
+  position: absolute;
+  top: 0;
+  left: -25%;
+  margin-top: 0;
+  transform: translateY(-40%) rotateZ(20deg);
+  filter: sepia(0.5) brightness(0.4) blur(1px);
+  box-shadow: 5px 4px 10px rgb(0,0,0,0.4);
+}
+
+.Dates
+{
+  position: relative;
+}
+
+#Chrono .DateContent
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 0%;
+  opacity : 0;
+  transition: opacity 0.25s ease-out;
+  
+}
+
+#Chrono img 
+{
+  margin-top: 12.5% ;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  filter: sepia(0.3) brightness(0.7);
+}
+
+#Chrono .Texte
+{
+  position: relative;
+  z-index: 10;
+  margin: 0% 20%;
+  color: white;
+  margin-bottom: 200px;
+}
+
+#dateActuelle
+{
+  position: relative;
+  filter: sepia(0.3) brightness(0.7);
+  color:  #e5ac2e;
+  font-size: 60px;
+  margin: 20px auto;
+  font-family: FuturaPT; 
+  width: fit-content;
+  width: -moz-fit-content;
+  padding: 5px 20px;
+  min-width : 200px;
+  text-align : center;
+}
+
+#dateActuelle::before
+{
+  content: "";
+  position: absolute;
+  background-color: #e5ac2e;
+  top: 50%;
+  right: 0;
+  height: 5px;
+  width: 1px;
+  transform-origin: left;
+  transform: scaleX(200) translateY(-50%);
+
+}
+
+#dateActuelle::after
+{
+  content: "";
+  position: absolute;
+  background-color: #e5ac2e;
+  top: 50%;
+  left: 0;
+  height: 5px;
+  width: 1px;
+  transform-origin: right;
+  transform: scaleX(200) translateY(-50%);
+}
+
+#Chrono .Texte p 
+{
+  margin-top: 100px;
+  color: white;
+  font-size: 30px;
+  font-family: Schoolbook;
+  filter: sepia(0.3) brightness(0.8) ;
+  text-shadow: 0px 0px 5px rgb(0,0,0,0.7);
+}
+
+#Chrono .photoDate
+{
+  position: absolute;
+  top: 0%;
+  right: 0;
+  height: 500px;
+  width: 400px;
+  background-color: rgb(180, 172, 161);
+  transform: translateX(100%) rotateZ(0deg);
+  transition: transform 0.25s linear;
+  opacity: 1;
+  z-index: 0;
+  filter: sepia(0.8) brightness(0.55) blur(1px);
+  box-shadow: 2px 4px 10px rgb(0,0,0,0.3);
+}
+
+#Chrono .photoDate span
+{
+  position: absolute;
+  width: 95%;
+  margin: 2.5%;
+  height: 70%;
+  filter: sepia(0.9) brightness(0.7) ;
+}
+
+#P1
+{
+  background:url(../img/Fallout_1969.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#P2
+{
+  background:url(../img/Fallout_2052.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#P3
+{
+  background:url(../img/Fallout_2066.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#P4
+{
+  background:url(../img/Fallout_2072.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#P5
+{
+  background:url(../img/Fallout_2077.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+/*_____________________________________________________________________________Animation Chronologie_________________________________________________________________*/
+
+            .frise{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around;
+              width: 80%;
+              left: 50%;
+              color: rgb(197, 197, 197);
+              padding-bottom: 20px;
+              position: absolute;
+              bottom: 5%;
+              transform: translateX(-50%);
+              
+            }
+
+            .frise::before
+            {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 1px;
+              bottom: 0;
+              left: 0;
+              background: -moz-repeating-linear-gradient(to right,rgb(197, 197, 197), rgb(197, 197, 197) 20px,transparent 20px, transparent 25px);
+              background: repeating-linear-gradient(to right,rgb(197, 197, 197), rgb(197, 197, 197) 20px,transparent 20px, transparent 25px);
+            }
+            .frise label
+            {
+              font-family: FuturaPT; 
+              font-size: 20px;
+              color: white;
+              position: relative;
+              transition: all 0.5s;
+            }
+
+            .frise label:hover
+            {
+              color: #634a14 !important;
+              cursor: pointer;
+              transition: all 0.5s;
+            }
+
+
+            .frise label::before
+            {
+              content:"" ;
+              position: absolute;
+              top: 120%;
+              left: 50%;
+              width: 1px;
+              height: 50%;
+              background-color:  rgb(197, 197, 197);
+              
+            }
+
+            .frise label:hover::before
+            {
+              background-color: #634a14;  
+            }
+
+            #Chrono input:checked + .DateContent
+            {
+              opacity: 1;
+              transform: translateX(0%);
+            }
+
+            #Chrono input:checked + .DateContent .photoDate
+            {
+              transform: translateX(20%) rotateZ(-20deg);
+              transition: transform 0.5s linear;
+              opacity: 1;
+              z-index: 1;
+            }
+
+            input
+            {
+              display: none;
+            }
+            
+/*_________________________________________________________________________________________Les Jeux__________________________________________________________________________________________*/
+
+#Jeux {
+  background-color: rgb(31, 27, 24);
+  overflow: hidden;
+  }
+
+#Bullet
+  {
+    position: absolute;
+    top: 0;
+    right: 0%;
+    margin-top: 0;
+    transform: translateY(40%) scale(0.8);
+    width: calc(100% * 0.2);
+    filter: brightness(0.6) drop-shadow(10px 10px 5px rgb(0,0,0,0.3)) blur(1px);
+  }
+
+#Blood
+{
+  position: absolute;
+  bottom: 0;
+  left: -5%;
+  filter :  sepia(0.6) brightness(0.3);
+  width: calc(100% * 0.25);
+  transform: scaleY(-1);
+  z-index: 1;
+  opacity: 0.5;
+
+}
+
+#Vault
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform : translate(-50%,-25%);
+  filter: sepia(0.3) brightness(0.4);
+  width: calc(100%*0.5);
+  z-index: 0;
+  opacity: 0.2;
+}
+
+#Jeux h2
+  {
+    position: relative;
+    filter: sepia(0.3) brightness(0.7);
+    color:  #e5ac2e;
+    font-size: 60px;
+    margin: 20px auto;
+    margin-top: 10%;
+    font-family: FuturaPT; 
+    width: fit-content;
+    width: -moz-fit-content;
+    padding: 0 20px;
+    text-transform: uppercase;
+  }
+  
+
+#Jeux h2::before
+  {
+    content: "";
+    position: absolute;
+    background-color: #e5ac2e;
+    top: 50%;
+    right: 0;
+    height: 5px;
+    width: 1px;
+    transform-origin: left;
+    transform: scaleX(200) translateY(-50%);
+  
+  }
+  
+#Jeux h2::after
+  {
+    content: "";
+    position: absolute;
+    background-color: #e5ac2e;
+    top: 50%;
+    left: 0;
+    height: 5px;
+    width: 1px;
+    transform-origin: right;
+    transform: scaleX(200) translateY(-50%);
+  }
+
+
+.ListJeux
+{
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  margin-top: 0%;
+  width: 50vw;
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+  gap: 50px;
+  justify-content: start;
+  border: 1px dashed rgb(226, 218, 207);
+  height: 65vh;
+}
+
+
+.ListJeux .photoJeu{
+  height: calc(500px* 0.6);
+  width: calc(400px * 0.6);
+  background-color: rgb(180, 172, 161);
+  transition: transform 0.25s linear;
+  opacity: 1;
+  z-index: 3;
+  filter: sepia(0.3) brightness(0.6) ;
+  box-shadow: 2px 4px 10px rgb(0,0,0,1);
+  pointer-events: none;
+  justify-self:  center ;
+  transition: all 1s;
+}
+
+.photoJeu span
+{
+  position: absolute;
+  width: 95%;
+  margin: 2.5%;
+  height: 70%;
+  background:url(../img/FalloutPres.png);
+  background-position: center;
+  filter: sepia(0.4) brightness(0.6) ;
+}
+
+.photoJeu p
+{
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  color: rgb(43, 43, 58);
+  font-family: Overseer;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.photoJeu:nth-child(1)
+{
+  transform : rotateZ(0deg) translateX(25%) translateY(15%) scale(1.2);
+  opacity: 0;
+  z-index: 2;
+}
+
+.photoJeu:nth-child(1) span
+{
+  background:url(../img/fallout1.jpg);
+  background-position: top left;
+  background-size: cover;
+}
+
+.photoJeu:nth-child(2)
+{
+  transform : rotateZ(-10deg) translateX(0%) translateY(6%) scale(1.2);
+  opacity: 0;
+   z-index: 3;
+}
+
+.photoJeu:nth-child(2) span
+{
+  background:url(../img/fallout2.jpg);
+  background-position: top left;
+  background-size: cover;
+}
+
+.photoJeu:nth-child(3)
+{
+  transform : rotateZ(0deg) translateX(-25%) translateY(0%) scale(1.2);
+  opacity: 0;
+  z-index: 2;
+}
+
+.photoJeu:nth-child(3) span
+{
+  background:url(../img/fallout3.jpg);
+  background-position: top left;
+  background-size: cover;
+}
+
+.photoJeu:nth-child(4)
+{
+  transform : rotateZ(0deg) translateX(25%) translateY(0%) scale(1.2);
+  opacity: 0;
+}
+
+.photoJeu:nth-child(4) span
+{
+  background:url(../img/FalloutNV.jpg);
+  background-position: top center;
+  background-size: cover;
+}
+
+.photoJeu:nth-child(5)
+{
+  transform : rotateZ(0deg)   translateX(-4%) translateY(-8%) scale(1.2);
+  opacity: 0;
+  z-index: 2;
+}
+
+.photoJeu:nth-child(5) span
+{
+  background:url(../img/Fallout4.jpg);
+  background-position: top left;
+  background-size: cover;
+}
+
+.photoJeu:nth-child(6)
+{
+  transform : rotateZ(0deg) translateX(-25%) translateY(0%) scale(1.2);
+  opacity: 0;
+}
+
+.photoJeu:nth-child(6) span
+{
+  background:url(../img/fallout76.jpg);
+  background-position: top left;
+  background-size: cover;
+}
+
+.photoJeu:hover
+{
+  filter: sepia(0.3) brightness(1);
+  transform : scale(1.1)!important;
+  z-index: 4;
+  box-shadow: 2px 4px 10px rgb(0,0,0,1);
+  transition: all 1s;
+}
+
+.photoJeu:hover span
+{
+  filter: sepia(0.4) brightness(0.6) ;
+}
+
+
+/*__________________________La communauté___________________________________*/
+
+#Commu
+{
+  background-image: url("../img/FalloutEnd.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+.bg
+{
+  position: absolute;
+  top: 0%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background : linear-gradient(to bottom, rgb(31, 27, 24) 0%,  transparent );
+}
+
+
+.ContCommu
+{
+  position: relative;
+  margin-top: 12.5%;
+}
+
+.ContCommu h2
+{
+  position: relative;
+  color:  #e5ac2e;
+  font-size: 60px;
+  margin: 20px auto;
+  margin-top: 10%;
+  font-family: FuturaPT; 
+  width: fit-content;
+  width: -moz-fit-content;
+  padding: 0 20px;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 5px rgb(0,0,0,0.7);
+  filter: sepia(0.3) brightness(0.7);
+  
+}
+
+.ContCommu h2::before
+{
+  content: "";
+  position: absolute;
+  background-color: #e5ac2e;
+  top: 50%;
+  right: 0;
+  height: 5px;
+  width: 1px;
+  transform-origin: left;
+  transform: scaleX(200) translateY(-50%);
+  box-shadow: 0px 0px 5px rgb(0,0,0,0.7);
+}
+  
+  .ContCommu h2::after
+  {
+    content: "";
+    position: absolute;
+    background-color: #e5ac2e;
+    top: 50%;
+    left: 0;
+    height: 5px;
+    width: 1px;
+    transform-origin: right;
+    transform: scaleX(200) translateY(-50%);
+    box-shadow: 0px 0px 5px rgb(0,0,0,0.7);
+  }
+
+.ContentBloc
+{
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+  gap: 10%;
+  width: 60vw;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.bloc img
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  filter: sepia(0.2) brightness(0.5) drop-shadow(10px 10px 5px rgb(0,0,0,0.2));
+  justify-self: center;
+  transition: 0.5s;
+}
+
+
+.bloc img:hover{
+  transform: rotateZ(10deg) scale(1.1);
+  filter: sepia(0.2) brightness(0.7) drop-shadow(10px 10px 5px rgb(0,0,0,0.5));
+}
+
+.bloc a{
+  text-decoration: none;
+}
+
+h3{
+  position: relative;
+  color:  #e5ac2e;
+  font-size: 38px;
+  font-family: FuturaPT; 
+  padding: 5px 0px;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0px 0px 5px rgb(0,0,0,0.7);
+  filter: sepia(0.3) brightness(0.7);
+  
+}
+
+.ContentBloc p
+{
+  color: white;
+  font-size: 30px;
+  font-family: Schoolbook;
+  filter: sepia(0.3) brightness(0.8) ;
+  text-align: center;
+}
+
+/* Footer */
+
+footer{
+  position: absolute;
+  display: flex;
+  bottom: 15px;
+  left: 0;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100vw;
+
+}
+
+footer p{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-family: FuturaPT;
+  text-align: center;
+  opacity: 0.3;
+}
+
+footer a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-family: FuturaPT;
+  text-align: center;
+  opacity: 0.3;
+}
+
+footer p a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-family: FuturaPT;
+  text-align: center;
+  opacity: 1;
+}
+
+
+
+
+
+/*_______Partie Responsive_________ */
+
+@media screen and (max-width: 1760px)
+{
+  #Chrono .photoDate{
+    height: calc(500px*0.9);
+    width: calc(400px*0.9);
+  }
+
+  .ListJeux .photoJeu{
+    height: calc(500px* 0.55);
+    width: calc(400px * 0.55);
+  }
+  
+
+  .photoJeu p{
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 1560px)
+{
+  #Chrono img{
+    margin-top: 15%;
+  }
+
+  #Chrono #Magazine
+  {
+    transform: scale(0.6) translateY(-70%) rotateZ(20deg);
+  }
+  
+  #Chrono .photoDate{
+    height: calc(500px*0.9);
+    width: calc(400px*0.9);
+  }
+
+  #Jeux h2{
+    margin-top: 15%;
+  }
+
+  .ListJeux
+  {
+    height: 50vh;
+    width: 60vw;
+  }
+
+  .ListJeux .photoJeu{
+    height: calc(500px* 0.5);
+    width: calc(400px * 0.5);
+  }
+  
+
+  .photoJeu p{
+    font-size: 18px;
+  }
+
+  #Commu h2{
+    margin-top: 15%;
+  }
+  
+}
+
+@media screen and (max-width: 1360px)
+{
+  .logoStart{
+    top: 32.5%;
+  } 
+
+  .logoStart img{
+    height: 125px;
+  }
+
+  .titre h1{
+    font-size: 125px;
+  }
+
+  #Sub p {
+    font-size: 32px;
+  }
+
+  .startScreen #textStartScreen{
+    font-size: 28px;
+    width: 75%;
+  }
+
+  .buttonStart{
+    top : 42.5%;
+  }
+
+  .buttonStart a{
+    font-size: 28px;
+  }
+
+  #Chrono img{
+    margin-top: 18%;
+  }
+
+  #dateActuelle{
+    font-size: 50px;
+  }
+
+  #Chrono .Texte p{
+    font-size: 24px;
+  }
+
+  #Jeux h2{
+    margin-top: 18%;
+    font-size: 50px;
+  }
+
+  .ListJeux .photoJeu{
+    height: calc(500px* 0.4);
+    width: calc(400px * 0.4);
+    
+  }
+  
+  .bloc img{
+    width: calc(250px * 0.8);
+  }
+
+  .ContCommu{
+    margin-top: 18%;
+  }
+
+  .ContCommu .bloc h3{
+    font-size: 30px ;
+  }
+
+  .ContCommu .bloc p{
+    font-size: 28px;
+  }
+
+
+}
+
+@media screen and (max-width: 1160px){
+  .PresT h1{
+    font-size: 35px;
+    width: 70vw;
+  }
+
+  .PresT h1 span{
+    margin-left: 20%;
+  }
+
+
+  .PresT p{
+    font-size: 28px;
+    margin: 0;
+    width: 70vw;
+  }
+
+  #Chrono .photoDate
+  {
+    height: calc(500px*0.9);
+    width: calc(400px*0.9);
+    top: 25%;
+    right: -5%;
+  }
+
+  .photoJeu:nth-child(1)
+  {
+    transform : rotateZ(0deg) translateX(0) translateY(15%) scale(1.2);
+    z-index: 2;
+  }
+
+  
+  .photoJeu:nth-child(2)
+  {
+    transform : rotateZ(6deg) translateX(0) translateY(6%)  scale(1.2);
+    z-index: 3;
+  }
+
+  .photoJeu:nth-child(3)
+  {
+    transform : rotateZ(5deg) translateX(0) translateY(10%)  scale(1.2);
+    z-index: 2;
+  }
+
+  .photoJeu:nth-child(4)
+  {
+    transform : rotateZ(0deg) translateX(0) translateY(-8%)  scale(1.2);
+  }
+
+  .photoJeu:nth-child(5)
+  {
+    transform : rotateZ(0deg)   translateX(0) translateY(-8%)  scale(1.2);
+    z-index: 2;
+  }
+
+  .photoJeu:nth-child(6)
+  {
+    transform : rotateZ(5deg) translateX(0) translateY(-10%)  scale(1.2);
+  }
+
+  .ContentBloc
+  {
+    margin-top: 5%;
+  }
+}
+
+@media (min-width: 726px) and (max-width: 1024px) and (orientation: landscape){
+
+  .startScreen #textStartScreen{
+    font-size: 24px;
+  }
+
+  .buttonStart{
+    top :45%;
+  }
+
+  .buttonStart a{
+    font-size: 24px;
+  }
+
+  .cursor{
+    display: none;
+  }
+
+  #Chrono img{
+    margin-top: 15%;
+  }
+
+  #Chrono .Texte{
+    margin: 10% 15%;
+  }
+
+  #dateActuelle{
+    margin : 10px auto;
+  }
+
+  #Chrono .Texte p{
+    margin-top: 25px;
+  }
+
+  #Chrono .photoDate
+  {
+    height: calc(500px*0.7);
+    width: calc(400px*0.7);
+    top: 20%;
+  }
+
+  #Vault
+  {
+    width: calc(100%*0);
+  }
+
+  .ListJeux{
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    gap: 50px;
+    width: 70vw;
+    height: 60vh;
+  }
+
+  .ListJeux .photoJeu{
+    height: calc(500px* 0.45);
+    width: calc(400px * 0.45);
+    filter: sepia(0.3) brightness(0.8);
+  }
+
+  .ContCommu .bloc h3{
+    font-size: 30px ;
+  }
+
+  .ContCommu .bloc p{
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 726px) and (max-width: 1024px) and (orientation: portrait){
+
+  .startScreen #textStartScreen{
+    font-size: 24px;
+  }
+
+  .buttonStart{
+    top : 40%;
+  }
+
+  .buttonStart a{
+    font-size: 24px;
+  }
+
+  .cursor{
+    display: none;
+  }
+
+  #Chrono img{
+    margin-top: 30%;
+  }
+
+  #Chrono .Texte{
+    margin: 10% 15%;
+  }
+
+  #dateActuelle{
+    margin : 10px auto;
+  }
+
+  #Chrono .Texte p{
+    margin-top: 25px;
+  }
+
+  #Chrono .photoDate
+  {
+    height: calc(500px*0.7);
+    width: calc(400px*0.7);
+    top: 50%;
+  }
+
+  #Jeux h2{
+    margin-top: 30%;
+  }
+  .ListJeux{
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    gap: 10px;
+    width: 60vw;
+    height: 60vh;
+  }
+
+  .ListJeux .photoJeu{
+    height: calc(500px* 0.4);
+    width: calc(400px * 0.4);
+    filter: sepia(0.3) brightness(0.8);
+  }
+
+  #Commu h2{
+    margin-top: 25%;
+  }
+
+
+  .ContentBloc{
+    width: 80%;
+    margin-top: 15%;
+  }
+
+  .ContCommu .bloc h3{
+    font-size: 30px ;
+  }
+
+  .ContCommu .bloc p{
+    font-size: 24px;
+  }
+}
+
+
+@media (max-width: 726px) and (orientation: portrait){
+  .logoStart img{
+    height: 70px;
+    padding-right: 5px;
+  }
+
+  .titre h1{
+    font-size: 70px;
+    margin-top: 12px;
+  }
+
+  .titre #Sub{
+    margin-top: -10px;
+  }
+
+  #Sub p{
+    font-size: 18px;
+  }
+
+  .startScreen #textStartScreen{
+    font-size: 18px;
+    width: 90%;
+  }
+
+  .buttonStart{
+    top: 40%;
+  }
+
+  .buttonStart a{
+    font-size: 18px;
+    margin: 30px;
+    padding: 15px 25px;
+  }
+
+  .cursor{
+    display: none;
+  }
+
+  .PresT{
+    left: 5%;
+  }
+
+  .PresT h1 {
+    font-size: 28px;
+    width: 100vw;
+  }
+
+  .PresT p {
+    font-size: 24px;
+    width: 85vw;
+    margin-left: 5%;
+  }
+
+  #Chrono img {
+    margin-top: 40%;
+    width: 200px;
+    margin-bottom: 10px;
+  }
+
+  #dateActuelle{
+    font-size: 32px;
+    margin: 0 auto;
+    padding: 0px 10px;
+    min-width: 100px;
+  }
+  
+  #dateActuelle::before{
+    transform: scaleX(100) translateY(-50%);
+  }
+
+  #dateActuelle::after{
+    transform: scaleX(100) translateY(-50%);
+  }
+
+  #Chrono #Magazine{
+    left: -70%;
+    width: 500px;
+  }
+
+  #Chrono .Texte{
+    margin: 0 5%;
+  }
+
+  #Chrono .DateContent{
+    height: 60vh;
+  }
+
+  #Chrono .Texte p{
+    margin-top: 50px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  #Chrono .photoDate{
+    height: calc(500px*0.5);
+    width: calc(400px*0.5);
+    Top: 35%;
+  }
+
+  .frise{
+    width: 90%;
+  }
+
+  .frise label{
+    font-size: 16px;
+  }
+
+  #Jeux h2{
+    margin-top: 40%;
+    font-size: 28px;
+  }
+
+  .ListJeux{
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    gap: 10px;
+    width: 90vw;
+    height: 60vh;
+  }
+
+  .ListJeux .photoJeu{
+    height: calc(500px *0.3);
+    width: calc(400px * 0.3);
+    filter: sepia(0.3) brightness(0.8);
+  }
+
+  .photoJeu p {
+    font-size: 14px;
+  }
+
+  #Commu h2{
+    margin-top: 40%;
+    font-size: 28px;
+  }
+
+  .ContentBloc {
+    display: grid;
+    grid-template: 1fr 1fr/ 1fr;
+    gap: 5%;
+  }
+
+  .bloc img {
+    width: calc(250px * 0.4);
+  }
+
+  .ContCommu .bloc h3 {
+    font-size: 20px;
+  }
+
+  .ContCommu .bloc p {
+    font-size: 18px;
+  }
+
+  footer p{
+    font-size: 14px;
+  }
+
+  footer p a{
+    font-size: 14px;
+  }
+
+  footer > a{
+    display: none;
+  }
+
+
+}
+
+
+
+@media (max-width: 400px) and (min-height:670px) and (orientation: portrait){
+
+  #Chrono img{
+    margin-top: 45%;
+  }
+
+
+  #Chrono .photoDate{
+    top: 50%;
+  }
+
+
+  .ContentBloc {
+    display: grid;
+    grid-template: 1fr 1fr/ 1fr;
+    gap: 5%;
+  }
+
+  .bloc img {
+    width: calc(250px * 0.5);
+  }
+
+  .ContCommu .bloc h3 {
+    font-size: 24px;
+  }
+
+  .ContCommu .bloc p {
+    font-size: 18px;
+  }
+
+
+}
+
+@media (max-width: 400px) and (max-height:670px) and (orientation: portrait){
+
+  .PresT p{
+    font-size: 22px;
+  }
+
+  #Chrono img{
+    margin-top: 40%;
+  }
+
+  #Chrono .Texte p{
+    font-size: 16px;
+  }
+
+  .ContCommu .bloc p{
+    font-size: 16px;
+  }
+
+  #Chrono .photoDate{
+    top: 35%;
+  }
+
+}

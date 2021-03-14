@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.css" integrity="sha512-RVmrWua3k1yTDEOg4Yzs2bK5+Thh7nM6jrhDq/6/5/Mwa0JbYe4pP4YMK5sqghKz01T3DgrwYc57Jaf1PSurCg==" crossorigin="anonymous" />
+    <link rel = "icon" href = "img/Logo-Short.svg"> 
+    <title>Fallout : Brand New Road</title>
+</head>
+<body>
+
+
+    <audio id="son" loop>
+        <source src="sound/Fallout 4 (Intro Cinematic Music Extended) - by Sam Yung.mp3" type="audio/mpeg">
+    </audio>
+
+    <!--Ecran portrait Smartphone-->
+    <div id="changeScreen">
+        <p>Please, turn your phone in portrait format. This website is unavaible in landscape format for smartphone.</p>
+    </div>
+
+
+    <!--Ecran de départ-->
+    <div class="startScreen">
+        <div class="logoStart">
+            <img src="img/Logo-mid.svg" alt="Casque Fallout">
+            <div class="titre">
+                <div><h1>Fallout</h1></div>
+                <div id="Sub"><p>brand new road</p></div>
+            </div>
+        </div>
+        <p id="textStartScreen">Welcome to Fallout : Brand New Road. For the best experience, we recommand you to enable the sound.</p>
+        <div class="buttonStart">
+            <a href="#" id="sound">Enable</a>
+            <a href="#" id="noSound">Disable</a>
+        </div>
+    </div>
+    
+
+    <header>
+        <img src="img/Radio.svg" alt="" id="muted-btn">
+        <div class="bg"></div>
+        <div class="LogoSite">
+            <img src="img/Logo-Long.svg" alt="Logo WebSite Fallout 'Brand New Road'">
+        </div>
+        <nav>
+            <a href="#Presentation" class="CatMenu">Presentation</a>
+            <a href="#Chronologie" class="CatMenu Mid">Chronology</a>
+            <a href="#JeuxLicence" class="CatMenu Mid">Games</a>
+            <a href="#Communaute" class="CatMenu">Community</a>
+        </nav>
+
+        <div class="audio"> 
+            <audio autoplay="true" muted="true" >
+                <source src="sound/Fallout 4 (Intro Cinematic Music Extended) - by Sam Yung.ogg" type="audio/ogg">
+                <source src="sound/Fallout 4 (Intro Cinematic Music Extended) - by Sam Yung.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+              </audio>
+        </div>
+    </header>
+
+
+
+
+    <div id="fullpage">
+
+    <!--Presentaion-->
+        <div class="section" id="Pres">
+            <div class="bg"></div>
+            <div class="PresT">
+                <h1>" War... war </br><span>  never changes. "</span></h1>
+                <p>After a long period of conflict, in 2077, a nuclear war broke out. Following decades of ruin, survive in a shattered world and write your destiny. </p>
+            </div>
+            <a href="#Chronologie" id="down">
+                    <i class="fas fa-chevron-down"></i> 
+            </a>
+            
+        </div>
+
+
+    <!--Chronologie-->
+        <div class="section" id="Chrono">
+            <img src="img/Magazin.jpg" alt="Magazin" id="Magazine">
+            
+            <img src="img/VaultTecLogo.png" alt="Vault">
+            <div class="Dates">
+                    
+                <div id="dateActuelle">1969</div>
+                    <input type="radio" id="1969" name="Frise" value="1969" checked>
+                    <div class="DateContent">
+                        <div class="Texte">
+                            <p>After the end of World War II in 1945, due to the rising of communism, the USA decided to create thirteen Commonwealths to prevent a political transition of their states. Consequently, the national flag has been redesigned to represent the Commonwealths and the unity of the country. Furthermore, a long period of scarcity of resources began, particularly oil, therefore some countries like the USA embraced nuclear energy to improve their weaponry.    </p>
+                        </div>
+                        <div class="photoDate">
+                            <span id="P1"></span>
+                        </div>
+                    </div>
+
+
+                    <input type="radio" id="2052" name="Frise" value="2052">
+                    <div class="DateContent D2C">
+                        <div class="Texte">
+                            <p>In 2052, oil reserves begin to run dry and Resource Wars begin across the world. In first, Mexico has been invaded in 2051 by the USA to enhance, insignificantly, their production of oil. Next year, the European Commonwealths started a campaign to conquest the Middle East and acquire their resources. At the same period, New Plagues arise in the US and kill more than 200 000 people, a national lockdown has been declared at the end of the year.     </p>
+                        </div>
+                        <div class="photoDate">
+                            <span id="P2"></span>
+                        </div>
+                    </div>
+
+                    <input type="radio" id="2066" name="Frise" value="2066">
+                    <div class="DateContent D2C">
+                        <div class="Texte">
+                            <p>China seeing the last oil reserves dry, tried to launch two operations to prevent their collapse. The first is to build an oil platform on the Pacific, the second is to trade talks with the USA to export their oil. However, the U.S. refused to export its resources and sabotaged the oil platform project of China. In winter, China invades Alaska and takes control of the last oil reserve. In answer, powers armor is sent to the Anchorage Front Line. However, Canada has considerable reticence to allow American troops on their soil.   </p>
+                        </div>
+                        <div class="photoDate">
+                            <span id="P3"></span>
+                        </div>
+                    </div>
+
+                    <input type="radio" id="2072" name="Frise" value="2072">    
+                    <div class="DateContent D2C">
+                        <div class="Texte">
+                            <p>Canada’s resources depleted by U.S. Army cause a lot of riots and protestations. Finally, an attack occurs on the Alaskan pipeline. In retaliation, the U.S. government decided to annex Canada by force in 2072. Two years later, the U.S. Army is deployed in China. Due to the long supply lines, the United States can no longer move forward over the Yangtze River. Furthermore, sino-Americans are sent to a concentration camp in the southwest of the U.S. and are used for military experiments.</p>
+                        </div>
+                        <div class="photoDate">
+                            <span id="P4"></span>
+                        </div>
+                    </div>
+
+                    <input type="radio" id="2077" name="Frise" value="2077">
+                    <div class="DateContent D2C">
+                        <div class="Texte">
+                            <p>In 2075, a new project lead by Week Task is born, his objective is to cure the New Plague but it evolves into a virus to create super soldiers by increasing size and resistance to viral contagions. On January 10th, 2077, Alaska has been retaken by the American forces. A few months later, the October 23rd the Great War begins. The world seeing Chinese and American nuclear bombs deploy, each country deploys their own, and an exchange of fire ensued.  No one knows who strikes first. In less than 2 hours, nuclear warheads strike the entire world.  </p>
+                        </div>
+                        <div class="photoDate">
+                            <span id="P5"></span>
+                        </div>
+                    </div>
+            </div>
+            
+            <div class="frise">
+                <label for="1969">1969</label>
+                <label for="2052">2052</label>
+                <label for="2066">2066</label>
+                <label for="2072">2072</label>
+                <label for="2077">2077</label>
+            </div>
+        </div>
+
+
+<!-----------------LES JEUX-------------------->
+
+
+        <div class="section" id="Jeux">
+
+            <img src="img/Bullet.png" alt="Bullet" id="Bullet">
+            <img src="img/Blood_2.png" alt="Blood" id="Blood">
+
+            <img src="img/Vault-Tec_Corporation_logo.svg" alt="Vault" id="Vault">
+            <h2>Licence's games</h2>
+
+            <div class="ListJeux">
+                
+                <a class="photoJeu" href="https://fallout.bethesda.net/fr/games/fallout" target=_blank>
+                    <span></span>
+                    <p>Fallout 1</p>
+                </a>
+                <a class="photoJeu" href="https://fallout.bethesda.net/fr/games/fallout-2" target=_blank>
+                    <span></span>
+                    <p>Fallout 2</p>
+                </a>
+                <a class="photoJeu" href="https://fallout.bethesda.net/fr/games/fallout-3" target=_blank>
+                    <span></span>
+                    <p>Fallout 3</p>
+                </a>
+                <a class="photoJeu" href="https://fallout.bethesda.net/fr/games/fallout-new-vegas" target=_blank>
+                    <span></span>
+                    <p>Fallout : New Vegas</p>
+                </a>
+                <a class="photoJeu" href="https://fallout.bethesda.net/fr/games/fallout-4" target=_blank>
+                    <span></span>
+                    <p>Fallout 4</p>
+                </a>
+                <a class="photoJeu" href="https://fallout.bethesda.net/fr/games/fallout-76" target=_blank>
+                    <span></span>
+                    <p>Fallout 76</p>
+                </a>     
+            </div>
+
+        </div>
+
+
+<!-----------------LA COMMUNAUTE-------------------->
+        <div class="section" id="Commu">
+
+            <div class="bg"></div>  
+            <div class="ContCommu">
+                <h2>The Community</h2>
+                <div class="ContentBloc">
+                    <div class="bloc">
+                        <a href="https://www.nexusmods.com/"><img src="img/nmm-logomark.svg" alt=""></a>
+                        <h3>Nexus Mod Community</h3>
+                        <p>Mods, a content made by players for the players.</p>
+                    </div>
+                    <div class="bloc">
+                        <a href="https://fallout.fandom.com/wiki/Fallout_Wiki"><img src="img/NukaPedia_Logo.png" alt=""></a>
+                        <h3>Nukapedia</h3>
+                        <p>Wasteland’s most complete encyclopedia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <p>Made by Victor Sin</p>
+                <p>©2021 | <a href="#">Mentions Légales</a></p>
+                <a href="mailto:sin.victor@outlook.fr">sin.victor@outlook.fr</a>
+            </footer>
+        </div>
+
+
+ 
+    </div>
+    <span class="cursor"></span>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js" integrity="sha512-HqbDsHIJoZ36Csd7NMupWFxC7e7aX2qm213sX+hirN+yEx/eUNlZrTWPs1dUQDEW4fMVkerv1PfMohR1WdFFJQ==" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
+

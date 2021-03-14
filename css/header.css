@@ -1,0 +1,177 @@
+@font-face
+{
+    src: url(../font/Overseer.ttf);
+    font-family: Overseer;
+}
+
+@font-face
+{
+    src: url(../font/FuturaPT-Bold.ttf);
+    font-family: FuturaPT;
+}
+
+
+header
+{
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+
+
+/*_______________________________________________________Logo&Animation_________________________________________________________________*/
+
+
+#muted-btn{
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    width: 60px;
+    transform: translateY(-50%);
+    filter: drop-shadow(0 0 1px black);
+    transition: all 0.5s;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#muted-btn:hover{
+    transform: scale(1.1) translateY(-50%);
+    transition: all 0.5s;
+    color: red;
+}
+
+.LogoSite
+{
+    width: 100%;
+    margin: 0px 0px;
+    padding:10px 0px
+}
+
+.LogoSite img
+{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 300px;
+    margin: 0 auto;
+    font-size: 80px;
+
+}
+
+
+
+@keyframes Appear
+{
+    0%{
+        pointer-events: none;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+@keyframes Enlarge
+{
+    0%{
+        opacity: 0;
+       transform: scaleX(0);
+    }
+
+    100%{
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+/*_______________________________________________________Catégories_________________________________________________________________*/
+
+nav
+{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    padding: -4px;
+}
+
+nav::before
+{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-color:  #e5ac2e;
+    transform-origin: center;
+    height: 1px;
+    width: 95vw;
+}
+
+nav::after
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    background-color:  #e5ac2e;
+    transform-origin: center;
+    height: 1px;
+    width: 95vw;
+}
+
+
+nav .CatMenu
+{
+    position: relative;
+    font-family: FuturaPT;
+    font-size: 20px;
+    color: #e5ac2e;
+    pointer-events: none;
+    opacity: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+nav .CatMenu:hover
+{
+    color: rgb(36, 36, 36);
+    background-color:  #e5ac2e;
+}
+
+.onSection
+{
+    color: rgb(36, 36, 36) !important;
+    background-color:  #e5ac2e;
+}
+
+@media (max-width: 1024px){
+    .LogoSite img
+    {
+        width: 275px;
+    }
+  }
+
+
+  @media (max-width: 726px) and (orientation: portrait){
+    .LogoSite img
+    {
+        width: 200px;
+    }
+
+
+    nav .CatMenu
+    {
+        font-size: 12px;
+    }
+
+    nav::after,nav::before{
+        width: 100%;
+    }
+
+    #muted-btn{
+        width: 40px;
+        top : 45%;
+    }
+    }
