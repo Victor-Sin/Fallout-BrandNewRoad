@@ -6,7 +6,7 @@ new fullpage('#fullpage',{
   autoScrolling: true,
   verticalCentered : false,
   scrollingSpeed : 500,
-
+  anchors:['Presentation','Chronologie','JeuxLicence','Communaute']
 })
 
 $(window).ready(function(){
