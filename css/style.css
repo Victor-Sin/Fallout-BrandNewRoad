@@ -1450,7 +1450,7 @@ footer p a{
   }
 
   #Chrono img {
-    margin-top: 40%;
+    margin-top: 35%;
     width: 200px;
     margin-bottom: 10px;
   }
@@ -1526,7 +1526,7 @@ footer p a{
   }
 
   #Commu h2{
-    margin-top: 40%;
+    margin-top: 35%;
     font-size: 28px;
   }
 
@@ -1575,7 +1575,7 @@ footer p a{
 @media only screen and (max-width: 400px) and (min-height:670px) and (orientation: portrait){
 
   #Chrono img{
-    margin-top: 40%;
+    margin-top: 35%;
   }
 
 
