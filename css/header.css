@@ -42,14 +42,8 @@ header
     color: red;
 }
 
-.LogoSite
-{
-    width: 100%;
-    margin: 0px 0px;
-    padding:10px 0px
-}
 
-.LogoSite img
+a.LogoSite img
 {
     position: relative;
     left: 50%;
@@ -58,7 +52,7 @@ header
     width: 300px;
     margin: 0 auto;
     font-size: 80px;
-
+    padding:10px 0px
 }
 
 
@@ -147,7 +141,7 @@ nav .CatMenu:hover
 }
 
 @media (max-width: 1024px){
-    .LogoSite img
+    a.LogoSite img
     {
         width: 275px;
     }
@@ -155,7 +149,7 @@ nav .CatMenu:hover
 
 
   @media (max-width: 726px) and (orientation: portrait){
-    .LogoSite img
+    a.LogoSite img
     {
         width: 200px;
     }

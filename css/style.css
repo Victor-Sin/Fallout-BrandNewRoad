@@ -147,7 +147,7 @@ body::before
   text-align:center;
   font-family: Schoolbook;
   text-transform:uppercase;
-  font-size: 32px;
+  font-size: 24px;
   transform: translate(-50%,-50%);
   width: 70%;
 }
@@ -1266,11 +1266,11 @@ footer p a{
   }
 
   #Chrono img{
-    margin-top: 15%;
+    margin-top: 16%;
   }
 
   #Chrono .Texte{
-    margin: 10% 15%;
+    margin: 8% 15%;
   }
 
   #dateActuelle{
@@ -1393,6 +1393,10 @@ footer p a{
 
 
 @media (max-width: 726px) and (orientation: portrait){
+  #changeScreen{
+    display: none;
+  }
+
   .logoStart img{
     height: 70px;
     padding-right: 5px;
@@ -1559,6 +1563,13 @@ footer p a{
 
 }
 
+@media (max-width: 900px) and (orientation: landscape){
+  #changeScreen{
+    display: inline;
+  }
+
+}
+
 
 
 @media (max-width: 400px) and (min-height:670px) and (orientation: portrait){
@@ -1581,6 +1592,12 @@ footer p a{
 
   .bloc img {
     width: calc(250px * 0.5);
+  }
+
+  .ListJeux .photoJeu{
+    height: calc(500px *0.3);
+    width: calc(400px * 0.3);
+    filter: sepia(0.3) brightness(0.8);
   }
 
   .ContCommu .bloc h3 {
@@ -1606,6 +1623,12 @@ footer p a{
 
   #Chrono .Texte p{
     font-size: 16px;
+  }
+
+  .ListJeux .photoJeu{
+    height: calc(500px *0.3);
+    width: calc(400px * 0.3);
+    filter: sepia(0.3) brightness(0.8);
   }
 
   .ContCommu .bloc p{
