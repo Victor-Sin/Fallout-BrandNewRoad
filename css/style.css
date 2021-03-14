@@ -1392,7 +1392,7 @@ footer p a{
 }
 
 
-@media only screen and (max-width: 726px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait){
+@media only screen and (max-width: 726px) and (orientation: portrait){
   #changeScreen{
     display: none;
   }
