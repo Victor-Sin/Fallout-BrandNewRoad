@@ -1108,6 +1108,33 @@ footer p a{
   
 }
 
+@media only screen and (max-width: 1440px){
+  #Chrono img{
+    margin-top: 12.5%;
+  }
+
+  #Chrono .Texte p{
+    font-size: 28px;
+  }
+
+  #Jeux h2 {
+    margin-top: 12.5%;
+  }
+
+  .ListJeux {
+    height: 60%;
+    width: 60vw;
+  }
+
+  #Commu h2 {
+    margin-top: 12.5%;
+  }
+
+  .ContentBloc p{
+    font-size: 28px;
+  }
+}
+
 @media only screen and (max-width: 1360px)
 {
   .logoStart{
@@ -1178,6 +1205,30 @@ footer p a{
     font-size: 28px;
   }
 
+
+}
+
+@media only screen and (max-width: 1280px){
+  #Chrono img{
+    margin-top: 15%;
+  }
+
+  #Jeux h2{
+    margin-top: 15%;
+  }
+
+  .ListJeux{
+    height: 60%;
+  }
+
+  .ListJeux .photoJeu {
+    height: calc(500px* 0.45);
+    width: calc(400px * 0.45);
+  }
+
+  #Commu h2 {
+    margin-top: 15%;
+}
 
 }
 
@@ -1435,7 +1486,8 @@ footer p a{
   }
 
   .PresT{
-    left: 5%;
+    left: 2.5%;
+    width: 100%;
   }
 
   .PresT h1 {
@@ -1575,7 +1627,8 @@ footer p a{
 @media only screen and (max-width: 400px) and (min-height:670px) and (orientation: portrait){
 
   #Chrono img{
-    margin-top: 35%;
+    margin-top: 40%;
+    width: 150px;
   }
 
 
@@ -1587,7 +1640,7 @@ footer p a{
   .ContentBloc {
     display: grid;
     grid-template: 1fr 1fr/ 1fr;
-    gap: 5%;
+    gap: 15%;
   }
 
   .bloc img {
@@ -1643,4 +1696,70 @@ footer p a{
     top: 35%;
   }
 
+}
+
+@media only screen and (max-width: 320px){
+  .PresT{
+    top: 60%;
+  }
+
+  .PresT h1{
+    font-size: 24px;
+  }
+
+  #Chrono img {
+    margin-top: 40%;
+    width: 120px;
+    margin-bottom: 0px;
+  }
+
+  #dateActuelle{
+    font-size: 28px;
+  }
+
+  #Chrono .Texte p {
+    font-size: 13px;
+    margin-top: 35px;
+  }
+
+  .frise label {
+    font-size: 12px;
+  }
+
+  #Jeux h2{
+    margin-top: 40%;
+  }
+
+  .ListJeux {
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+  }
+
+  .ListJeux .photoJeu {
+    height: calc(500px *0.2);
+    width: calc(400px * 0.2);
+  }
+
+  #Commu h2{
+    margin-top: 40%;
+  }
+
+  .ContentBloc{
+    grid-template: 1fr / 1fr 1fr;
+  }
+
+  .ContCommu .bloc h3 {
+    font-size: 18px;
+  }
+
+  .ContCommu .bloc p {
+    font-size: 13px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+
+  footer p a {
+    font-size: 12px;
+  }
 }
