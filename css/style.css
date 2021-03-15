@@ -1051,8 +1051,8 @@ footer p a{
 @media only screen and (max-width: 1760px)
 {
   #Chrono .photoDate{
-    height: calc(500px*0.8);
-    width: calc(400px*0.8);
+    height: calc(500px*0.9);
+    width: calc(400px*0.9);
   }
 
   .ListJeux .photoJeu{
@@ -1078,8 +1078,8 @@ footer p a{
   }
   
   #Chrono .photoDate{
-    height: calc(500px*0.9);
-    width: calc(400px*0.9);
+    height: calc(500px*0.8);
+    width: calc(400px*0.8);
   }
 
   #Jeux h2{
